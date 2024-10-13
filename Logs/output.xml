@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.8 on win32)" generated="20221014 22:15:52.749" rpa="false" schemaversion="3">
+<suite id="s1" name="SImple Tests" source="C:\Users\dapss\PycharmProjects\ProfitSoftware_InterviewTask\SImple_Tests.robot">
+<test id="s1-t1" name="Check add to cart and logo on homepage" line="7">
+<kw name="Verify that Logo and add to cart button are displayed" library="SimpleKeywords">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221014 22:15:53.547" level="INFO">Opening browser 'chrome' to base url 'http://automationpractice.com/index.php'.</msg>
+<status status="PASS" starttime="20221014 22:15:53.545" endtime="20221014 22:16:02.045"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221014 22:16:02.045" endtime="20221014 22:16:02.687"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${APPLICATIONLOGO}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221014 22:16:02.687" endtime="20221014 22:16:02.787"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${CART}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221014 22:16:02.787" endtime="20221014 22:16:02.852"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221014 22:16:02.853" endtime="20221014 22:16:06.144"/>
+</kw>
+<status status="PASS" starttime="20221014 22:15:53.545" endtime="20221014 22:16:06.145"/>
+</kw>
+<status status="PASS" starttime="20221014 22:15:53.542" endtime="20221014 22:16:06.146"/>
+</test>
+<test id="s1-t2" name="Login with correct credentials" line="11">
+<kw name="Login" library="SimpleKeywords">
+<arg>${VALID_USERNAME}</arg>
+<arg>${VALID_PASSWORD}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221014 22:16:06.151" level="INFO">Opening browser 'chrome' to base url 'http://automationpractice.com/index.php'.</msg>
+<status status="PASS" starttime="20221014 22:16:06.150" endtime="20221014 22:16:15.824"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${HOMEPAGE_SIGNIN_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221014 22:16:15.825" level="INFO">Clicking element 'class:login'.</msg>
+<status status="PASS" starttime="20221014 22:16:15.824" endtime="20221014 22:16:19.577"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${EMAIL_LOGIN}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221014 22:16:19.578" level="INFO">Typing text 'lanre_april@gmail.com' into text field 'name:email'.</msg>
+<status status="PASS" starttime="20221014 22:16:19.577" endtime="20221014 22:16:20.325"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PASSWORD_LOGIN}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221014 22:16:20.327" level="INFO">Typing text 'testing' into text field 'id:passwd'.</msg>
+<status status="PASS" starttime="20221014 22:16:20.325" endtime="20221014 22:16:20.771"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${LOGIN_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221014 22:16:20.772" level="INFO">Clicking element 'id:SubmitLogin'.</msg>
+<status status="PASS" starttime="20221014 22:16:20.772" endtime="20221014 22:16:24.511"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${LOGGEDIN_USER}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20221014 22:16:24.554" level="INFO">Current page contains text 'Dorice Mbonde'.</msg>
+<status status="PASS" starttime="20221014 22:16:24.511" endtime="20221014 22:16:24.554"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221014 22:16:24.554" endtime="20221014 22:16:27.244"/>
+</kw>
+<status status="PASS" starttime="20221014 22:16:06.150" endtime="20221014 22:16:27.245"/>
+</kw>
+<status status="PASS" starttime="20221014 22:16:06.149" endtime="20221014 22:16:27.246"/>
+</test>
+<doc>Suite description</doc>
+<status status="PASS" starttime="20221014 22:15:52.753" endtime="20221014 22:16:27.249"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="SImple Tests">SImple Tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
